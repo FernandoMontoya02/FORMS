@@ -1,0 +1,31 @@
+<div class="fondo"> 
+    <div class="container">
+        <h1>Formulario Reactive</h1>
+        <br />
+        <form [formGroup]="persona" (ngSubmit)="onSubmit()" class="animated-form">
+            <div class="mb-3">
+                <label class="form-label">Cedula</label>
+                <input type="text" class="form-control" formControlName="cedula">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control" formControlName="nombre">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Fecha Nacimiento</label>
+                <input type="date" class="form-control" formControlName="fechaN">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Ciudad</label>
+                <select class="form-select" aria-label="Default select example" formControlName="ciudad">
+                    <option selected>Selecciona una ciudad</option>
+                    <option value="Machala">Machala</option>
+                    <option value="Ponce">Ponce</option>
+                    <option value="Cuenca">Cuenca</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">OK</button>
+            <button type="reset" class="btn btn-primary">CANCELAR</button>
+        </form>
+    </div>
+</div>
